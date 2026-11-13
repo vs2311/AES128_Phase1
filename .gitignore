@@ -1,0 +1,17 @@
+# Vivado log and journal files
+*.log
+*.jou
+*.str
+.Xil/
+
+# Vivado simulation binaries and caches
+xsim.dir/
+*.wdb
+*.vcd
+*.pb
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+

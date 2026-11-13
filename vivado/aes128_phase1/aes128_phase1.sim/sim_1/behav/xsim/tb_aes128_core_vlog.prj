@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../rtl/aes128_core.v" \
+"../../../../../../rtl/aes_key_expand.v" \
+"../../../../../../rtl/aes_mix_columns.v" \
+"../../../../../../rtl/aes_sbox.v" \
+"../../../../../../rtl/aes_shift_rows.v" \
+"../../../../../../rtl/aes_sub_bytes.v" \
+"../../../../../../tb/tb_aes128_core.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

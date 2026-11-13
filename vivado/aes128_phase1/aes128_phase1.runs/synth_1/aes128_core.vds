@@ -1,0 +1,341 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov 10 02:17:50 2026
+# Process ID: 18464
+# Current directory: C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/vivado/aes128_phase1/aes128_phase1.runs/synth_1
+# Command line: vivado.exe -log aes128_core.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes128_core.tcl
+# Log file: C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/vivado/aes128_phase1/aes128_phase1.runs/synth_1/aes128_core.vds
+# Journal file: C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/vivado/aes128_phase1/aes128_phase1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source aes128_core.tcl -notrace
+Command: synth_design -top aes128_core -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14860 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 361.902 ; gain = 101.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'aes128_core' [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes128_core.v:12]
+INFO: [Synth 8-6157] synthesizing module 'aes_sub_bytes' [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_sub_bytes.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aes_sbox' [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_sbox.v:4]
+INFO: [Synth 8-226] default block is never used [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_sbox.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'aes_sbox' (1#1) [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_sbox.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'aes_sub_bytes' (2#1) [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_sub_bytes.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aes_shift_rows' [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_shift_rows.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'aes_shift_rows' (3#1) [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_shift_rows.v:10]
+INFO: [Synth 8-6157] synthesizing module 'aes_mix_columns' [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_mix_columns.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'aes_mix_columns' (4#1) [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_mix_columns.v:10]
+INFO: [Synth 8-6157] synthesizing module 'aes_key_expand' [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_key_expand.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aes_key_expand' (5#1) [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes_key_expand.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aes128_core' (6#1) [C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/rtl/aes128_core.v:12]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 418.039 ; gain = 157.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 418.039 ; gain = 157.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 418.039 ; gain = 157.137
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "ciphertext" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 418.039 ; gain = 157.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 3     
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 3     
+	   2 Input      8 Bit         XORs := 22    
+	   4 Input      8 Bit         XORs := 12    
+	   5 Input      8 Bit         XORs := 4     
++---Registers : 
+	              128 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module aes128_core 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 3     
++---Registers : 
+	              128 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module aes_mix_columns 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 22    
+	   4 Input      8 Bit         XORs := 12    
+	   5 Input      8 Bit         XORs := 4     
+Module aes_key_expand 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "ciphertext" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------+----------------------------+---------------+----------------+
+|Module Name    | RTL Object                 | Depth x Width | Implemented As | 
++---------------+----------------------------+---------------+----------------+
+|aes_sbox       | out_byte                   | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[15].u_sbox/out_byte | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[14].u_sbox/out_byte | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[13].u_sbox/out_byte | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[12].u_sbox/out_byte | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[11].u_sbox/out_byte | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[10].u_sbox/out_byte | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[9].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[8].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[7].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[6].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[5].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[4].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[3].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[2].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[1].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_sub_bytes  | g_sbox[0].u_sbox/out_byte  | 256x8         | LUT            | 
+|aes_key_expand | u_s3/out_byte              | 256x8         | LUT            | 
+|aes_key_expand | u_s2/out_byte              | 256x8         | LUT            | 
+|aes_key_expand | u_s1/out_byte              | 256x8         | LUT            | 
+|aes_key_expand | u_s0/out_byte              | 256x8         | LUT            | 
++---------------+----------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT2  |    95|
+|3     |LUT3  |    46|
+|4     |LUT4  |    61|
+|5     |LUT5  |   116|
+|6     |LUT6  |  1062|
+|7     |MUXF7 |   320|
+|8     |MUXF8 |   160|
+|9     |FDRE  |   390|
+|10    |IBUF  |   259|
+|11    |OBUF  |   130|
++------+------+------+
+
+Report Instance Areas: 
++------+------------------------+---------------+------+
+|      |Instance                |Module         |Cells |
++------+------------------------+---------------+------+
+|1     |top                     |               |  2640|
+|2     |  u_ke                  |aes_key_expand |   633|
+|3     |    u_s0                |aes_sbox_15    |   170|
+|4     |    u_s1                |aes_sbox_16    |   156|
+|5     |    u_s2                |aes_sbox_17    |   151|
+|6     |    u_s3                |aes_sbox_18    |   156|
+|7     |  u_sb                  |aes_sub_bytes  |  1149|
+|8     |    \g_sbox[0].u_sbox   |aes_sbox       |    69|
+|9     |    \g_sbox[10].u_sbox  |aes_sbox_0     |    68|
+|10    |    \g_sbox[11].u_sbox  |aes_sbox_1     |    76|
+|11    |    \g_sbox[12].u_sbox  |aes_sbox_2     |    69|
+|12    |    \g_sbox[13].u_sbox  |aes_sbox_3     |    78|
+|13    |    \g_sbox[14].u_sbox  |aes_sbox_4     |    72|
+|14    |    \g_sbox[15].u_sbox  |aes_sbox_5     |    76|
+|15    |    \g_sbox[1].u_sbox   |aes_sbox_6     |    74|
+|16    |    \g_sbox[2].u_sbox   |aes_sbox_7     |    68|
+|17    |    \g_sbox[3].u_sbox   |aes_sbox_8     |    68|
+|18    |    \g_sbox[4].u_sbox   |aes_sbox_9     |    72|
+|19    |    \g_sbox[5].u_sbox   |aes_sbox_10    |    75|
+|20    |    \g_sbox[6].u_sbox   |aes_sbox_11    |    65|
+|21    |    \g_sbox[7].u_sbox   |aes_sbox_12    |    77|
+|22    |    \g_sbox[8].u_sbox   |aes_sbox_13    |    65|
+|23    |    \g_sbox[9].u_sbox   |aes_sbox_14    |    77|
++------+------------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 606.234 ; gain = 345.332
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 606.234 ; gain = 345.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 606.234 ; gain = 345.332
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 480 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 666.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 666.938 ; gain = 418.938
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 666.938 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vsaro/Downloads/AES128_Phase1/AES128_Phase1/vivado/aes128_phase1/aes128_phase1.runs/synth_1/aes128_core.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file aes128_core_utilization_synth.rpt -pb aes128_core_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 10 02:18:26 2026...

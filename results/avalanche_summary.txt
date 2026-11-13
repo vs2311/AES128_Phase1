@@ -1,0 +1,15 @@
+Trials: 2000
+1-bit plaintext change: mean 63.93 bits (49.95%), std 5.67
+1-bit key change      : mean 64.19 bits (50.15%), std 5.62
+Mean differing state bits after each round:
+  round  0:   1.00
+  round  1:  16.15
+  round  2:  64.36
+  round  3:  63.96
+  round  4:  64.13
+  round  5:  63.92
+  round  6:  64.25
+  round  7:  64.04
+  round  8:  64.10
+  round  9:  64.09
+  round 10:  63.93

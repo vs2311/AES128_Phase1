@@ -1,0 +1,35 @@
+EXPECTED Tcl Console output of tb_aes128_core (generated from the Python model).
+Your Vivado run should print the same values. Replace this with your own screenshot/log.
+
+==== Part 1: FIPS-197 Appendix B example (round-by-round) ====
+   key       = 2b7e151628aed2a6abf7158809cf4f3c
+   plaintext = 3243f6a8885a308d313198a2e0370734
+   round  0 | round key = 2b7e151628aed2a6abf7158809cf4f3c | state = 193de3bea0f4e22b9ac68d2ae9f84808
+   round  1 | round key = a0fafe1788542cb123a339392a6c7605 | state = a49c7ff2689f352b6b5bea43026a5049
+   round  2 | round key = f2c295f27a96b9435935807a7359f67f | state = aa8f5f0361dde3ef82d24ad26832469a
+   round  3 | round key = 3d80477d4716fe3e1e237e446d7a883b | state = 486c4eee671d9d0d4de3b138d65f58e7
+   round  4 | round key = ef44a541a8525b7fb671253bdb0bad00 | state = e0927fe8c86363c0d9b1355085b8be01
+   round  5 | round key = d4d1c6f87c839d87caf2b8bc11f915bc | state = f1006f55c1924cef7cc88b325db5d50c
+   round  6 | round key = 6d88a37a110b3efddbf98641ca0093fd | state = 260e2e173d41b77de86472a9fdd28b25
+   round  7 | round key = 4e54f70e5f5fc9f384a64fb24ea6dc4f | state = 5a4142b11949dc1fa3e019657a8c040c
+   round  8 | round key = ead27321b58dbad2312bf5607f8d292f | state = ea835cf00445332d655d98ad8596b0c5
+   round  9 | round key = ac7766f319fadc2128d12941575c006e | state = eb40f21e592e38848ba113e71bc342d2
+   round 10 | round key = d014f9a8c9ee2589e13f0cc8b6630ca6 | state = 3925841d02dc09fbdc118597196a0b32
+   ciphertext= 3925841d02dc09fbdc118597196a0b32  (expected 3925841d02dc09fbdc118597196a0b32)  PASS
+   latency   = 11 clock cycles (start -> done)
+
+==== Part 2: 102 test vectors ====
+   [  0] PASS  ct = 3925841d02dc09fbdc118597196a0b32  (11 cycles)
+   [  1] PASS  ct = 69c4e0d86a7b0430d8cdb78070b4c55a  (11 cycles)
+   [  2] PASS  ct = 53f18f623547a3077b7df2c1653f4a5b  (11 cycles)
+   [  3] PASS  ct = a74693d19d41209a81ac81d23f28fde3  (11 cycles)
+   [  4] PASS  ct = 53f4f835af884f59b610062f3e0c0909  (11 cycles)
+   ... (remaining results in sim_results.txt)
+
+==== SUMMARY ====
+   Vectors tested : 102
+   PASS           : 102
+   FAIL           : 0
+   Latency        : 11 cycles/block
+   Throughput     : 128 bits / 11 cycles = 11.63 bits/cycle
+   RESULT         : ALL TESTS PASSED

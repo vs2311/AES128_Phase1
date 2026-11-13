@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1794257318">
+  <File Type="PA-TCL" Name="aes128_core.tcl"/>
+  <File Type="BITSTR-BMM" Name="aes128_core_bd.bmm"/>
+  <File Type="REPORTS-TCL" Name="aes128_core_reports.tcl"/>
+  <File Type="OPT-DCP" Name="aes128_core_opt.dcp"/>
+  <File Type="OPT-DRC" Name="aes128_core_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="aes128_core.hwdef"/>
+  <File Type="PWROPT-DCP" Name="aes128_core_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="aes128_core_placed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="aes128_core_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="aes128_core.bgn"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="aes128_core_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="aes128_core.bin"/>
+  <File Type="PHYSOPT-DCP" Name="aes128_core_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="aes128_core.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="aes128_core_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="aes128_core_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="aes128_core_routed_bb.dcp"/>
+  <File Type="BITSTR-LTX" Name="aes128_core.ltx"/>
+  <File Type="BITSTR-MMI" Name="aes128_core.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="aes128_core.sysdef"/>
+  <File Type="ROUTE-TIMING-PB" Name="aes128_core_timing_summary_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="aes128_core_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="aes128_core_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="aes128_core.bit"/>
+  <File Type="BITSTR-RBT" Name="aes128_core.rbt"/>
+  <File Type="BITSTR-NKY" Name="aes128_core.nky"/>
+  <File Type="BG-DRC" Name="aes128_core.drc"/>
+  <File Type="RDI-RDI" Name="aes128_core.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../rtl/aes_key_expand.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/aes_mix_columns.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/aes_sbox.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/aes_shift_rows.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/aes_sub_bytes.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/aes128_core.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="aes128_core"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
